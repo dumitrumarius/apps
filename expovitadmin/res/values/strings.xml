@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">ExpoVitAdmin</string>
+
+    <string name="platform_prompt">Alegeti o platforma</string>
+    <string-array name="platform">
+        <item>Toate</item>
+        <item>Playstation 3</item>
+        <item>Playstation 4</item>
+        <item>Xbox One</item>
+        <item>Xbox 360</item>
+        <item>Nintendo Switch</item>
+        <item>Nintendo 3DS</item>
+        <item>PC</item>
+    </string-array>
+    <string-array name="language">
+        <item>RO</item>
+        <item>EN</item>
+    </string-array>
+
+    <string name="edit">Editare</string>
+    <string name="deleteItem">Stergere</string>
+    <string name="guideTitleRO">Ghid</string>
+    <string name="guideP1RO">Pentru a afla preturile jocurilor din catalogul electronic, este necesara parcurgerea pasilor de mai jos:</string>
+    <string name="guideStepOneRO">1. Descarcati aplicatia \"Carrefour Pay\" din Magazin Play (Play Store) sau App Store, sau scanati codul QR de mai jos pentru a ajunge direct la aplicatie.</string>
+    <string name="guideStepTwoRO">2.Inregistrati-va pe platforma.</string>
+    <string name="guideStepThreeRO">3.Apasati butonul rosu din dreapta jos pentru a scana codul dorit.</string>
+
+    <string name="guideTitleEN">Guide</string>
+    <string name="guideP1EN">In order to find the prices of the games from the electronic catalog, it is necessary to follow the steps below:</string>
+    <string name="guideStepOneEN">1.Download the \"Carrefour Pay\" application from the Play Store or the App Store, or scan the QR code below for to reach the application directly.</string>
+    <string name="guideStepTwoEN">2. Register on the platform.</string>
+    <string name="guideStepThreeEN">3. Press the red button on the bottom right corner to scan the desired code.</string>
+
+    <string name="not_found">Nu au fost găsite jocurile căutate.</string>
+    <string name="empty_list">Momentan, nu avem produse care să facă parte din această categorie.</string>
+    <string name="title">Titlu</string>
+    <string name="about">Despre</string>
+</resources>

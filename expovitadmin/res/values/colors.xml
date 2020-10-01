@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="crf_blue">#005AAB</color>
+    <color name="crf_red">#F11A28</color>
+    <color name="white">#FFFFFF</color>
+    <color name="powderwhite">#FBFEF9</color>
+    <color name="darkgunmetalgray">#0d1f2d</color>
+    <color name="darkblue">#0b132b</color>
+</resources>
