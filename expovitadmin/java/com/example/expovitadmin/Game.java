@@ -1,14 +1,24 @@
 package com.example.expovitadmin;
 
+import com.google.firebase.database.Exclude;
 import com.google.firebase.database.IgnoreExtraProperties;
 
 @IgnoreExtraProperties
 public class Game {
 
     public String ean, image_path, name, platform;
-    public boolean new_flag, preorder;
+    public boolean isNew, preorder;
 
     public Game(){
+    }
+
+    public Game(String mName, String mEan, String mImage_path, String mPlatform, boolean mPreorder, boolean mNew){
+        name = mName;
+        ean = mEan;
+        image_path = mImage_path;
+        platform = mPlatform;
+        isNew = mNew;
+        preorder = mPreorder;
     }
 
     public String getEan() {
@@ -44,11 +54,11 @@ public class Game {
     }
 
     public boolean getNew(){
-        return new_flag;
+        return isNew;
     }
 
-    public void setNew(Boolean new_flag){
-        this.new_flag = new_flag;
+    public void setNew(Boolean isNew){
+        this.isNew = isNew;
     }
     public boolean getPreorder(){
         return preorder;

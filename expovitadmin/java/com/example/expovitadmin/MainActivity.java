@@ -26,6 +26,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -41,9 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
     private ArrayList<Game> gamesList;
     private RecyclerAdapter recyclerAdapter;
-
-    private Button editItem;
-    private Button deleteItem;
+    private ImageButton addNewGame;
 
     private Spinner platform_spinner;
     @Override
@@ -51,11 +50,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        //getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
-        editItem = findViewById(R.id.editButton);
-        deleteItem = findViewById(R.id.deleteButton);
-
+        addNewGame = findViewById(R.id.add_new_game);
         recyclerView =findViewById(R.id.recyclerView);
         int columnsNumber = Utility.calculateColumns(this, 280);
 
@@ -70,7 +67,6 @@ public class MainActivity extends AppCompatActivity {
         //RecyclerView
 
         platform_spinner = findViewById(R.id.platform_spinner);
-
         databaseReference = FirebaseDatabase.getInstance().getReference();
 
         gamesList = new ArrayList<>();
@@ -146,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
                         games.setImage_path(snapshot.child("image_path").getValue().toString());
                         games.setName(snapshot.child("name").getValue().toString());
                         games.setPlatform(snapshot.child("platform").getValue().toString());
-                        games.setNew(snapshot.hasChild("new"));
+                        games.setNew(snapshot.hasChild("isNew"));
                         games.setPreorder(snapshot.hasChild("preorder"));
                         gamesList.add(games);
                     }
@@ -194,6 +190,11 @@ public class MainActivity extends AppCompatActivity {
         }
         RecyclerAdapter recyclerAdapter = new RecyclerAdapter(gamesPlatformChosen, getApplicationContext());
         recyclerView.setAdapter(recyclerAdapter);
+    }
+
+    public void addNewGame(View v){
+        Intent intent = new Intent(MainActivity.this, AddNewGameActivity.class);
+        startActivity(intent);
     }
 
 }
