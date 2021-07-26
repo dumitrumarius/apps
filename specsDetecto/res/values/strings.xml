@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">sDetect</string>
+    <string-array name="screen_type">
+        <item>Non-HD  </item>
+        <item>HD      </item>
+        <item>Full HD </item>
+        <item>4K      </item>
+        <item>Default </item>
+    </string-array>
+    <string-array name="ram_memory_type">
+        <item>KB</item>
+        <item>MB</item>
+        <item>GB</item>
+    </string-array>
+    <string-array name="has_sim">
+        <item>Da</item>
+        <item>Nu</item>
+    </string-array>
+    <string-array name="android_names">
+        <item>KitKat</item>
+        <item>Lollipop</item>
+        <item>Marshmallow</item>
+        <item>Nougat</item>
+        <item>Oreo</item>
+        <item>Pie</item>
+    </string-array>
+</resources>
