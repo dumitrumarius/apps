@@ -45,7 +45,11 @@ public class SpecsActivity extends AppCompatActivity{
         setContentView(R.layout.activity_specs);
         sharedPreferences = getSharedPreferences("com.example.marius.specsdetecto", MODE_PRIVATE);
         thisActivity = this;
-
+        
+        /*
+            As there were some issues with the way the Android system outputs the system configuration to the application,
+            I had to create a hidden button for these instances, which makes the affected fields editable by the user.
+        */
         Button editSpecsHiddenButton = findViewById(R.id.editSpecsHiddenButton);
         TextView getProcessorModel = findViewById(R.id.getProcessorModel);
         TextView getScreenSize = findViewById(R.id.getScreenSize);
